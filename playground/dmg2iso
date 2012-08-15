@@ -1,5 +1,8 @@
 #!/bin/sh
 # Convert .iso and .dmg back and forth
+#!!!!NOT TESTED!!!!!!
+#!!!!COPIED FROM INTERNET!!!!
+#http://hints.macworld.com/article.php?story=20040121135301830
 foreach f $argv {
     if {[file extensio $f] == ".dmg"} {
         eval exec {hdiutil convert "$f" -format UDTO -o [file rootname "$f"].iso}
