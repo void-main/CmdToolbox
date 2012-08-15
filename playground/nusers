@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# count number of users
+
+who | wc -l

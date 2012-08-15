@@ -1,0 +1,9 @@
+#!/bin/sh
+# Convert .iso and .dmg back and forth
+foreach f $argv {
+    if {[file extensio $f] == ".dmg"} {
+        eval exec {hdiutil convert "$f" -format UDTO -o [file rootname "$f"].iso}
+    } else {
+        eval exec {hdiutil convert "$f.dmg" -format UDTO -o "$f.iso"}
+    }
+} 

@@ -1,0 +1,4 @@
+#!/bin/sh
+# find the user according to command line argument
+
+who | grep $1
